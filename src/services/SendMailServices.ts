@@ -21,7 +21,6 @@ class SendMailService {
   }
 
   async execute(to: string, subject: string, variables: object, path: string) {
-    
     const templateFileContent = fs.readFileSync(path).toString("utf8");
 
     const mailTemplateParse = handleBars.compile(templateFileContent);
